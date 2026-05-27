@@ -5,15 +5,23 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Siddharth Kushwaha | Full Stack Web Developer",
+  metadataBase: new URL(
+    "https://your-portfolio.vercel.app"
+  ),
+
+  title:
+    "Siddharth Kushwaha | Full Stack Web Developer",
+
   description:
     "Professional portfolio of Siddharth Kushwaha, Full Stack Web Developer specializing in Next.js, React, Node.js, Express.js, MongoDB, and modern web technologies.",
 
@@ -34,6 +42,7 @@ export const metadata: Metadata = {
   ],
 
   creator: "Siddharth Kushwaha",
+
   publisher: "Siddharth Kushwaha",
 
   icons: {
@@ -43,11 +52,17 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Siddharth Kushwaha | Full Stack Web Developer",
+    title:
+      "Siddharth Kushwaha | Full Stack Web Developer",
+
     description:
       "Professional portfolio of Siddharth Kushwaha, Full Stack Web Developer.",
+
     url: "https://your-portfolio.vercel.app",
-    siteName: "Siddharth Kushwaha Portfolio",
+
+    siteName:
+      "Siddharth Kushwaha Portfolio",
+
     images: [
       {
         url: "/icon.png",
@@ -56,15 +71,21 @@ export const metadata: Metadata = {
         alt: "Siddharth Kushwaha Logo",
       },
     ],
+
     locale: "en_US",
+
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Siddharth Kushwaha | Full Stack Web Developer",
+
+    title:
+      "Siddharth Kushwaha | Full Stack Web Developer",
+
     description:
       "Professional portfolio of Siddharth Kushwaha, Full Stack Web Developer.",
+
     images: ["/icon.png"],
   },
 
@@ -82,7 +103,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-slate-950 text-white">
         {children}
