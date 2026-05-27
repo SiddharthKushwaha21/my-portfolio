@@ -76,7 +76,7 @@ const educationData = [
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
     badgeColor:
       "border-orange-400/20 bg-orange-400/10 text-orange-300",
-    degreeFile: "/degrees/10th-marksheet.jpeg",
+    degreeFile: "/degrees/10th-marksheet.pdf",
     buttonText: "View 10th Marksheet",
   },
 ];
