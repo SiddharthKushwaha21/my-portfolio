@@ -23,9 +23,9 @@ const socialLinks = [
     icon: FaLinkedin,
   },
   {
-  name: "Email",
-  href: "https://mail.google.com/mail/?view=cm&fs=1&to=sid.kushwaha04@gmail.com",
-  icon: Mail,
+    name: "Email",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=sid.kushwaha04@gmail.com",
+    icon: Mail,
   },
 ];
 
@@ -33,8 +33,8 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
     },
   },
 };
@@ -42,19 +42,23 @@ const containerVariants = {
 const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 30,
+    y: 20,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 };
 
 export default function Hero() {
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.innerWidth < 768;
+
   return (
     <section
       id="home"
@@ -63,28 +67,36 @@ export default function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
         {/* Glow 1 */}
         <motion.div
-          animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+          animate={
+            !isMobile
+              ? { x: [0, 40, 0], y: [0, -30, 0] }
+              : {}
+          }
           transition={{
-            duration: 10,
+            duration: 18,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute left-1/4 top-20 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl sm:h-96 sm:w-96"
+          className="absolute left-1/4 top-20 h-64 w-64 rounded-full bg-cyan-500/10 blur-xl md:h-96 md:w-96 md:blur-3xl"
         />
 
         {/* Glow 2 */}
         <motion.div
-          animate={{ x: [0, -40, 0], y: [0, 30, 0] }}
+          animate={
+            !isMobile
+              ? { x: [0, -40, 0], y: [0, 30, 0] }
+              : {}
+          }
           transition={{
-            duration: 12,
+            duration: 20,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-10 right-1/4 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl sm:h-96 sm:w-96"
+          className="absolute bottom-10 right-1/4 h-64 w-64 rounded-full bg-violet-500/10 blur-xl md:h-96 md:w-96 md:blur-3xl"
         />
 
         {/* Radial Overlay */}
@@ -103,9 +115,10 @@ export default function Hero() {
           {/* Badge */}
           <motion.div
             variants={itemVariants}
-            className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-xs font-medium text-cyan-300 backdrop-blur-xl sm:text-sm"
+            className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-xs font-medium text-cyan-300 backdrop-blur-0 md:backdrop-blur-md sm:text-sm"
           >
             <Sparkles className="h-4 w-4 shrink-0" />
+
             <span className="truncate">
               Available for Internship & Full-Time Opportunities
             </span>
@@ -135,8 +148,14 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-4 max-w-xl text-base leading-7 text-slate-400 sm:mt-6 sm:text-lg sm:leading-8"
           >
-            Passionate Full Stack Web Developer with hands-on experience in building responsive, scalable, and modern web applications using React.js, Next.js, Django, MongoDB, MySQL, and Tailwind CSS. Focused on creating clean user interfaces, optimized performance, and user-friendly digital experiences through modern web technologies and efficient development practices.
-
+            Passionate Full Stack Web Developer with hands-on
+            experience in building responsive, scalable, and
+            modern web applications using React.js, Next.js,
+            Django, MongoDB, MySQL, and Tailwind CSS.
+            Focused on creating clean user interfaces,
+            optimized performance, and user-friendly digital
+            experiences through modern web technologies and
+            efficient development practices.
           </motion.p>
 
           {/* Buttons */}
@@ -146,17 +165,18 @@ export default function Hero() {
           >
             <Link
               href="#projects"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-cyan-500/40 sm:w-auto"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-7 py-3.5 font-semibold text-white shadow-md transition-all duration-300 md:hover:scale-[1.02] md:hover:shadow-lg sm:w-auto"
             >
               View Projects
-              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 md:group-hover:translate-x-1" />
             </Link>
 
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/10 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur-0 transition-all duration-300 md:backdrop-blur-md md:hover:border-cyan-400/30 md:hover:bg-white/10 sm:w-auto"
             >
               <Download className="h-5 w-5" />
               Download Resume
@@ -170,7 +190,6 @@ export default function Hero() {
           >
             {socialLinks.map((item) => {
               const Icon = item.icon;
-              const isEmail = item.name === "Email";
 
               return (
                 <a
@@ -180,7 +199,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
-                  className="group flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className="group flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 backdrop-blur-0 transition-all duration-300 md:backdrop-blur-md md:hover:-translate-y-1 md:hover:border-cyan-400/30 md:hover:text-cyan-400 md:hover:shadow-md"
                 >
                   <Icon className="h-5 w-5" size={20} />
                 </a>
@@ -191,20 +210,20 @@ export default function Hero() {
 
         {/* Right Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="order-1 mx-auto lg:order-2"
         >
           <div className="relative h-[280px] w-[280px] sm:h-[380px] sm:w-[380px] lg:h-[500px] lg:w-[500px]">
             {/* Outer Glow */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 opacity-25 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 opacity-20 blur-xl md:blur-3xl" />
 
             {/* Rotating Border */}
             <motion.div
-              animate={{ rotate: 360 }}
+              animate={!isMobile ? { rotate: 360 } : {}}
               transition={{
-                duration: 20,
+                duration: 25,
                 repeat: Infinity,
                 ease: "linear",
               }}
@@ -214,13 +233,15 @@ export default function Hero() {
             </motion.div>
 
             {/* Glass Container */}
-            <div className="absolute inset-3 rounded-full border border-white/10 bg-white/5 p-3 backdrop-blur-2xl sm:inset-4 sm:p-4">
+            <div className="absolute inset-3 rounded-full border border-white/10 bg-white/5 p-3 backdrop-blur-0 md:inset-4 md:p-4 md:backdrop-blur-lg">
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
                   src="/images/profile.png"
                   alt="Siddharth Kushwaha"
                   fill
                   priority
+                  quality={75}
+                  sizes="(max-width: 768px) 280px, 500px"
                   className="object-cover object-top"
                 />
               </div>
@@ -228,13 +249,13 @@ export default function Hero() {
 
             {/* Floating Badge */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
+              animate={!isMobile ? { y: [0, -10, 0] } : {}}
               transition={{
-                duration: 3,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-xl sm:px-6 sm:py-3"
+              className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-0 md:px-6 md:py-3 md:backdrop-blur-md"
             >
               <p className="whitespace-nowrap text-xs font-medium text-white sm:text-sm">
                 Web Developer
