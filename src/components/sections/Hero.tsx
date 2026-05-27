@@ -173,7 +173,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="/resume.pdf"
+              href="/Sid-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur-0 transition-all duration-300 md:backdrop-blur-md md:hover:border-cyan-400/30 md:hover:bg-white/10 sm:w-auto"
