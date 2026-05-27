@@ -59,7 +59,7 @@ const educationData = [
     gradient: "from-emerald-500 via-teal-500 to-cyan-600",
     badgeColor:
       "border-emerald-400/20 bg-emerald-400/10 text-emerald-300",
-    degreeFile: "/degrees/12th-marksheet.jpeg",
+    degreeFile: "/degrees/12th-marksheet.pdf",
     buttonText: "View 12th Marksheet",
   },
 
