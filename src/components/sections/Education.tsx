@@ -16,30 +16,37 @@ import {
 const educationData = [
   {
     degree: "Master of Computer Applications (MCA)",
-    institution: "Chhatrapati Shahu Ji Maharaj University (CSJMU)",
+    institution:
+      "Chhatrapati Shahu Ji Maharaj University (CSJMU)",
     duration: "2024 - 2026",
-    location: "Kanpur Nagar, Uttar Pradesh, India",
+    location:
+      "Kanpur Nagar, Uttar Pradesh, India",
     description:
       "Currently pursuing MCA with a strong focus on Full Stack Web Development, Software Engineering, Database Management, and Modern Web Technologies.",
     status: "Pursuing",
     icon: Trophy,
-    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
+    gradient:
+      "from-cyan-500 via-blue-500 to-indigo-600",
     badgeColor:
       "border-cyan-400/20 bg-cyan-400/10 text-cyan-300",
-    // degreeFile: "/degrees/mca-degree.pdf",
-    buttonText: "Final Semester Exams Completed • Result Awaited",
+    buttonText:
+      "Final Semester Exams Completed • Result Awaited",
   },
 
   {
-    degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Jagran College Of Arts, Science And Commerce",
+    degree:
+      "Bachelor of Computer Applications (BCA)",
+    institution:
+      "Jagran College Of Arts, Science And Commerce",
     duration: "2021 - 2024",
-    location: "Kanpur Nagar, Uttar Pradesh, India",
+    location:
+      "Kanpur Nagar, Uttar Pradesh, India",
     description:
       "Built a strong foundation in Programming, Data Structures, Databases, Mathematics, and Core Computer Science fundamentals.",
     status: "Completed",
     icon: BookOpen,
-    gradient: "from-violet-500 via-purple-500 to-fuchsia-600",
+    gradient:
+      "from-violet-500 via-purple-500 to-fuchsia-600",
     badgeColor:
       "border-violet-400/20 bg-violet-400/10 text-violet-300",
     degreeFile: "/degrees/bca-degree.pdf",
@@ -51,15 +58,18 @@ const educationData = [
     institution:
       "Ch. Vishambhar Singh Bhartiya Vidyalaya Inter College",
     duration: "2019 - 2020",
-    location: "Auraiya, Uttar Pradesh, India",
+    location:
+      "Auraiya, Uttar Pradesh, India",
     description:
       "Completed Senior Secondary Education (PCM) with 72%, building strong analytical and problem-solving skills.",
     status: "Completed",
     icon: Stars,
-    gradient: "from-emerald-500 via-teal-500 to-cyan-600",
+    gradient:
+      "from-emerald-500 via-teal-500 to-cyan-600",
     badgeColor:
       "border-emerald-400/20 bg-emerald-400/10 text-emerald-300",
-    degreeFile: "/degrees/12th-marksheet.pdf",
+    degreeFile:
+      "/degrees/12th-marksheet.pdf",
     buttonText: "View 12th Marksheet",
   },
 
@@ -68,15 +78,18 @@ const educationData = [
     institution:
       "Ch. Vishambhar Singh Bhartiya Balika Inter College",
     duration: "2017 - 2018",
-    location: "Auraiya, Uttar Pradesh, India",
+    location:
+      "Auraiya, Uttar Pradesh, India",
     description:
       "Completed High School Education with 69%, developing a strong academic foundation and learning mindset.",
     status: "Completed",
     icon: BadgeCheck,
-    gradient: "from-orange-500 via-amber-500 to-yellow-500",
+    gradient:
+      "from-orange-500 via-amber-500 to-yellow-500",
     badgeColor:
       "border-orange-400/20 bg-orange-400/10 text-orange-300",
-    degreeFile: "/degrees/10th-marksheet.pdf",
+    degreeFile:
+      "/degrees/10th-marksheet.pdf",
     buttonText: "View 10th Marksheet",
   },
 ];
@@ -85,7 +98,7 @@ const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.25,
+      staggerChildren: 0.12,
     },
   },
 };
@@ -93,21 +106,25 @@ const containerVariants = {
 const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 80,
-    scale: 0.95,
+    y: 35,
+    scale: 0.97,
   },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.9,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
 
 export default function Education() {
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.innerWidth < 768;
+
   return (
     <section
       id="education"
@@ -115,23 +132,25 @@ export default function Education() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-20 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute right-20 top-40 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-20 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-violet-500/10 blur-3xl" />
+        <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-xl md:h-96 md:w-96 md:blur-3xl" />
 
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute right-20 top-40 h-72 w-72 rounded-full bg-blue-500/10 blur-xl md:h-96 md:w-96 md:blur-3xl" />
+
+        <div className="absolute bottom-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-500/10 blur-xl md:h-96 md:w-96 md:blur-3xl" />
+
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 text-sm font-medium text-cyan-300 backdrop-blur-xl">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 text-sm font-medium text-cyan-300 backdrop-blur-0 md:backdrop-blur-md">
             <Sparkles className="h-4 w-4" />
             Education
           </div>
@@ -144,8 +163,9 @@ export default function Education() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
-            My educational path has built a strong foundation in programming,
-            computer science, and modern web development technologies.
+            My educational path has built a strong
+            foundation in programming, computer science,
+            and modern web development technologies.
           </p>
         </motion.div>
 
@@ -169,28 +189,38 @@ export default function Education() {
                   key={item.degree}
                   variants={itemVariants}
                   className={`relative flex flex-col md:flex-row ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    index % 2 === 0
+                      ? "md:flex-row-reverse"
+                      : ""
                   }`}
                 >
                   {/* Timeline Icon */}
                   <div className="absolute left-6 top-10 z-20 flex h-16 w-16 -translate-x-1/2 items-center justify-center md:left-1/2">
                     <motion.div
-                      animate={{
-                        boxShadow: [
-                          "0 0 0px rgba(6,182,212,0.4)",
-                          "0 0 30px rgba(6,182,212,0.6)",
-                          "0 0 0px rgba(6,182,212,0.4)",
-                        ],
-                      }}
+                      animate={
+                        !isMobile
+                          ? {
+                              boxShadow: [
+                                "0 0 0px rgba(6,182,212,0.4)",
+                                "0 0 25px rgba(6,182,212,0.5)",
+                                "0 0 0px rgba(6,182,212,0.4)",
+                              ],
+                            }
+                          : {}
+                      }
                       transition={{
-                        duration: 3,
+                        duration: 4,
                         repeat: Infinity,
                       }}
-                      whileHover={{
-                        scale: 1.15,
-                        rotate: 10,
-                      }}
-                      className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r ${item.gradient} shadow-2xl`}
+                      whileHover={
+                        !isMobile
+                          ? {
+                              scale: 1.08,
+                              rotate: 5,
+                            }
+                          : {}
+                      }
+                      className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r ${item.gradient} shadow-lg md:shadow-2xl`}
                     >
                       <Icon className="h-7 w-7 text-white" />
                     </motion.div>
@@ -202,29 +232,29 @@ export default function Education() {
                   {/* Card */}
                   <div className="ml-16 md:ml-0 md:w-1/2 md:px-10">
                     <motion.div
-                      whileHover={{
-                        y: -12,
-                        scale: 1.02,
-                        rotateX: 3,
-                        rotateY: 3,
-                      }}
+                      whileHover={
+                        !isMobile
+                          ? {
+                              y: -8,
+                              scale: 1.01,
+                            }
+                          : {}
+                      }
                       transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15,
+                        duration: 0.3,
                       }}
-                      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
+                      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-lg shadow-black/20 backdrop-blur-0 md:shadow-[0_20px_80px_rgba(0,0,0,0.45)] md:backdrop-blur-xl"
                     >
                       {/* Gradient Glow */}
                       <div
-                        className={`absolute -inset-px rounded-3xl bg-gradient-to-r ${item.gradient} opacity-0 blur-xl transition duration-700 group-hover:opacity-30`}
+                        className={`absolute -inset-px rounded-3xl bg-gradient-to-r ${item.gradient} opacity-0 blur-lg transition duration-500 md:blur-xl md:group-hover:opacity-30`}
                       />
 
                       {/* Shine Effect */}
-                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 md:group-hover:translate-x-full" />
 
                       {/* Decorative Icon */}
-                      <Stars className="absolute right-6 top-6 h-5 w-5 text-cyan-400/20 transition duration-500 group-hover:rotate-180 group-hover:text-cyan-300/50" />
+                      <Stars className="absolute right-6 top-6 h-5 w-5 text-cyan-400/20 transition duration-300 md:group-hover:rotate-180 md:group-hover:text-cyan-300/50" />
 
                       {/* Content */}
                       <div className="relative z-10">
@@ -264,59 +294,71 @@ export default function Education() {
                           {item.description}
                         </p>
 
-                        {/* Separate Degree Button */}
+                        {/* Degree Button */}
                         <motion.a
                           href={item.degreeFile}
                           target="_blank"
                           rel="noopener noreferrer"
-                          whileHover={{
-                            scale: 1.05,
-                            y: -4,
-                            boxShadow:
-                              "0px 15px 35px rgba(255,255,255,0.15)",
-                          }}
+                          whileHover={
+                            !isMobile
+                              ? {
+                                  scale: 1.02,
+                                  y: -2,
+                                }
+                              : {}
+                          }
                           whileTap={{
-                            scale: 0.96,
+                            scale: 0.98,
                           }}
-                          className={`group/button relative mt-8 inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r ${item.gradient} px-7 py-4 font-semibold text-white shadow-2xl`}
+                          className={`group/button relative mt-8 inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r ${item.gradient} px-7 py-4 font-semibold text-white shadow-lg md:shadow-2xl`}
                         >
                           {/* Animated Shine */}
-                          <motion.div
-                            animate={{
-                              x: ["-120%", "220%"],
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "linear",
-                            }}
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                          />
+                          {!isMobile && (
+                            <motion.div
+                              animate={{
+                                x: [
+                                  "-120%",
+                                  "220%",
+                                ],
+                              }}
+                              transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "linear",
+                              }}
+                              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                            />
+                          )}
 
                           {/* Pulse Glow */}
-                          <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 blur-2xl transition duration-500 group-hover/button:opacity-100" />
+                          <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 blur-xl transition duration-300 md:blur-2xl md:group-hover/button:opacity-100" />
 
-                          {/* Floating Particles */}
-                          <motion.div
-                            animate={{
-                              y: [0, -5, 0],
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                            }}
-                            className="absolute right-4 top-2 h-2 w-2 rounded-full bg-white/60"
-                          />
+                          {/* Floating Particle */}
+                          {!isMobile && (
+                            <motion.div
+                              animate={{
+                                y: [0, -5, 0],
+                              }}
+                              transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                              }}
+                              className="absolute right-4 top-2 h-2 w-2 rounded-full bg-white/60"
+                            />
+                          )}
 
                           {/* Icon */}
                           <motion.div
-                            whileHover={{
-                              rotate: 15,
-                              scale: 1.2,
-                            }}
+                            whileHover={
+                              !isMobile
+                                ? {
+                                    rotate: 10,
+                                    scale: 1.08,
+                                  }
+                                : {}
+                            }
                             transition={{
-                              type: "spring",
-                              stiffness: 300,
+                              duration: 0.3,
                             }}
                             className="relative z-10"
                           >
@@ -329,23 +371,29 @@ export default function Education() {
                           </span>
 
                           {/* Arrow Animation */}
-                          <motion.div
-                            animate={{
-                              x: [0, 5, 0],
-                            }}
-                            transition={{
-                              duration: 1.2,
-                              repeat: Infinity,
-                            }}
-                            className="relative z-10"
-                          >
-                            <ExternalLink className="h-5 w-5" />
-                          </motion.div>
+                          {!isMobile ? (
+                            <motion.div
+                              animate={{
+                                x: [0, 4, 0],
+                              }}
+                              transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                              }}
+                              className="relative z-10"
+                            >
+                              <ExternalLink className="h-5 w-5" />
+                            </motion.div>
+                          ) : (
+                            <div className="relative z-10">
+                              <ExternalLink className="h-5 w-5" />
+                            </div>
+                          )}
                         </motion.a>
 
                         {/* Bottom Gradient Line */}
                         <div
-                          className={`mt-8 h-1 w-20 rounded-full bg-gradient-to-r ${item.gradient} transition-all duration-500 group-hover:w-40`}
+                          className={`mt-8 h-1 w-20 rounded-full bg-gradient-to-r ${item.gradient} transition-all duration-500 md:group-hover:w-40`}
                         />
                       </div>
                     </motion.div>
