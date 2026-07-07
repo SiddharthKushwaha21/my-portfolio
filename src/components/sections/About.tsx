@@ -149,27 +149,15 @@ export default function About() {
 
               <div className="mt-6 space-y-6 text-base leading-9 text-slate-400">
                 <p>
-                  I am Siddharth Kushwaha, an MCA student and
-                  passionate Full Stack Web Developer with a
-                  strong interest in designing and developing
-                  modern, responsive, and user-friendly web
-                  applications.
+                  I am Siddharth Kushwaha, an MCA graduate and an enthusiastic Full Stack Developer passionate about building modern, scalable, and high-performance web applications. I enjoy transforming complex ideas into intuitive digital products that combine clean architecture, responsive design, and exceptional user experiences.
                 </p>
 
                 <p>
-                  I enjoy transforming ideas into real-world
-                  digital solutions that are clean, efficient,
-                  scalable, and visually engaging. My focus is
-                  on creating applications that not only look
-                  attractive but also provide excellent
-                  performance and a seamless user experience.
+                  My expertise includes JavaScript, React.js, Next.js, Node.js, Express.js, Python, Django, MongoDB, MySQL, HTML, CSS, Tailwind CSS, and REST APIs. Through academic learning, internships, and personal projects, I have developed practical experience in creating efficient, secure, and maintainable software solutions.
                 </p>
 
                 <p>
-                  I am currently seeking internship and
-                  full-time opportunities where I can apply my
-                  skills, contribute to meaningful projects,
-                  and grow as a software developer.
+                  I am currently looking for Software Engineer and Full Stack Developer opportunities where I can apply my technical skills, contribute to innovative products, collaborate with experienced professionals, and continue growing as a developer while delivering meaningful business value.
                 </p>
               </div>
             </div>
