@@ -394,7 +394,7 @@ export default function Contact() {
 
                 {/* Resume Button */}
                 <Link
-                  href="/Resume.pdf"
+                  href="/Sid Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-[1.02]"
