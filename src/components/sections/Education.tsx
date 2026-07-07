@@ -22,15 +22,15 @@ const educationData = [
     location:
       "Kanpur Nagar, Uttar Pradesh, India",
     description:
-      "Currently pursuing MCA with a strong focus on Full Stack Web Development, Software Engineering, Database Management, and Modern Web Technologies.",
-    status: "Pursuing",
+      "Successfully completed the Master of Computer Applications (MCA), building strong expertise in Full Stack Web Development, Software Engineering, Database Management, Data Structures & Algorithms, and Modern Web Technologies through academic learning and practical project development.",
+    status: "Completed",
     icon: Trophy,
     gradient:
       "from-cyan-500 via-blue-500 to-indigo-600",
     badgeColor:
       "border-cyan-400/20 bg-cyan-400/10 text-cyan-300",
     buttonText:
-      "Final Semester Exams Completed • Result Awaited",
+      "🎓 MCA Successfully Completed • Degree Awarded",
   },
 
   {
@@ -42,7 +42,7 @@ const educationData = [
     location:
       "Kanpur Nagar, Uttar Pradesh, India",
     description:
-      "Built a strong foundation in Programming, Data Structures, Databases, Mathematics, and Core Computer Science fundamentals.",
+      "Successfully completed the Bachelor of Computer Applications (BCA), building a strong foundation in Programming, Data Structures & Algorithms, Database Management, Operating Systems, Computer Networks, Software Engineering, and Web Development through academic learning and hands-on projects.",
     status: "Completed",
     icon: BookOpen,
     gradient:
