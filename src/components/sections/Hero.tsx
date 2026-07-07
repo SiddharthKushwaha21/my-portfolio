@@ -148,14 +148,7 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-4 max-w-xl text-base leading-7 text-slate-400 sm:mt-6 sm:text-lg sm:leading-8"
           >
-            Passionate Full Stack Web Developer with hands-on
-            experience in building responsive, scalable, and
-            modern web applications using React.js, Next.js,
-            Django, MongoDB, MySQL, and Tailwind CSS.
-            Focused on creating clean user interfaces,
-            optimized performance, and user-friendly digital
-            experiences through modern web technologies and
-            efficient development practices.
+            Passionate Full Stack Web Developer and Master of Computer Applications (MCA) graduate with hands-on experience in building responsive, scalable, and modern web applications. Skilled in JavaScript, React.js, Next.js, Node.js, Express.js, Python, Django, MongoDB, MySQL, Tailwind CSS, and REST APIs, with a strong focus on clean code, performance optimization, and building easy-to-use, high-quality web applications.
           </motion.p>
 
           {/* Buttons */}
